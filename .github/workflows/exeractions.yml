@@ -58,6 +58,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Install build dependencies
+      run: sudo apt install libeigen3-dev libyaml-cpp-dev libboost-test-dev
+    
     - name: Download build archive
       uses: actions/download-artifact@v2.1.0
       with:
