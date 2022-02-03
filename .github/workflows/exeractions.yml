@@ -41,13 +41,13 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
       
     - name: Create build archive
-      run: tar -cvf ${{github.workspace}}/build.tar ${{github.workspace}}/build
+      run: tar -cvf build.tar build
       
     - name: Upload build archive
       uses: actions/upload-artifact@v2.3.1
       with:
         name: build-archive
-        path: ${{github.workspace}}/build.tar
+        path: build.tar
         if-no-files-found: error
         retention-days: 1
     
@@ -64,7 +64,7 @@ jobs:
         name: build-archive
         
     - name: Unpack build archive
-      run: tar -xvf ${{github.workspace}}/build.tar
+      run: tar -xvf build.tar
     
     - name: Run tests
       working-directory: ${{github.workspace}}/build
