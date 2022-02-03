@@ -1,3 +1,5 @@
+[![CMake](https://github.com/qwach/testing-boost-exercise/actions/workflows/exeractions.yml/badge.svg)](https://github.com/qwach/testing-boost-exercise/actions/workflows/exeractions.yml)
+
 # SIDEMADE - Simple Dense Matrix Decomposition
 
 A simple demo code to read dense matrices from files and solve linear systems with them.
